@@ -253,6 +253,8 @@
           1,
           1,
           1,
+          1,
+          null,
           null,
           null,
           null
@@ -309,7 +311,7 @@
         "lines": [
           1,
           1,
-          null,
+          2,
           null,
           null
         ]
@@ -321,7 +323,7 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
           null,
           1,
@@ -329,8 +331,18 @@
           null,
           null
         ]
+      },
+      "/Users/ericchon/turing/4mod/take_home/tea_service/app/serializers/subscription_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1649715541
+    "timestamp": 1649716232
   }
 }
