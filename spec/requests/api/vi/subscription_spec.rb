@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Subscription API' do
+RSpec.describe 'Subscription endpoints' do
   describe 'create: post /subscription' do
     describe 'happy path' do
       it 'returns the new subscription as a json object' do
