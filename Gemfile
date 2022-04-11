@@ -34,7 +34,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov', require: false
   gem 'shoulda-matchers'
-  gem 'orderly'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do

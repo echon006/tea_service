@@ -1,0 +1,26 @@
+require 'rails_helper'
+
+RSpec.describe 'Subscription API' do
+  describe 'create: post /subscription' do
+    describe 'happy path' do
+      it 'returns the new subscription as a json object' do
+        customer = create(:customer)
+        tea = create(:tea)
+        subscription_params = ({
+                    title: 'Title 1 for sub 1',
+                    price: '4.99',
+                    frequency: 4,
+                    tea_id: tea.id,
+                    customer_id: customer.id
+                    })
+        headers = {"CONTENT_TYPE" => "application/json"}
+        post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: subscription_params)
+        created_sub = Subscription.last
+
+        expect(response.status).to eq(201)
+        expect(created_sub.title).to eq(subscription_params[:title])
+        expect(created_sub.price).to eq(subscription_params[:price])
+      end
+    end
+  end
+end
