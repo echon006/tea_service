@@ -22,5 +22,21 @@ RSpec.describe 'Subscription API' do
         expect(created_sub.price).to eq(subscription_params[:price])
       end
     end
+    describe 'sad path' do
+      it 'returns a 404 error if subscription cannot be created due to invalid params ' do
+        customer = create(:customer)
+        tea = create(:tea)
+        subscription_params = ({
+                    title: 'Title 1 for sub 1',
+                    frequency: 4,
+                    tea_id: tea.id,
+                    customer_id: customer.id
+                    })
+        headers = {"CONTENT_TYPE" => "application/json"}
+        post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: subscription_params)
+
+        expect(response.status).to eq(400)
+      end
+    end
   end
 end

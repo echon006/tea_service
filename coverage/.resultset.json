@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -208,10 +208,10 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
+          3,
           null,
           null,
           null
@@ -236,10 +236,10 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
+          3,
           null,
           null,
           null
@@ -248,6 +248,11 @@
       "/Users/ericchon/turing/4mod/take_home/tea_service/config/routes.rb": {
         "lines": [
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -284,8 +289,65 @@
           1,
           null
         ]
+      },
+      "/Users/ericchon/turing/4mod/take_home/tea_service/app/controllers/api/v1/subscriptions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/4mod/take_home/tea_service/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/4mod/take_home/tea_service/app/models/subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/4mod/take_home/tea_service/app/serializers/subscription_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1649710170
+    "timestamp": 1649712887
   }
 }
