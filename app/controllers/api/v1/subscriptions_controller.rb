@@ -6,7 +6,12 @@ class Api::V1::SubscriptionsController < ApplicationController
   end
 
   def update
-    
+    sub = Subscription.find(params[:id])
+    if sub.update_attributes(params.permit(:title, :price, :status,  :frequency, :tea_id, :customer_id))
+      render json: SubscriptionSerializer.new(sub)
+    else
+      render json: {error: 'could not update subscription'}, status: 400
+    end
   end
 
   private
