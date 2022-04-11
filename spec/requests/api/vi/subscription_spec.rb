@@ -51,5 +51,16 @@ RSpec.describe 'Subscription API' do
         expect(Subscription.last.status).to eq(false)
       end
     end
+
+    describe 'sad path' do
+      it 'cannot update a subscription' do
+        customer = create(:customer)
+        tea = create(:tea)
+        sub = create :subscription, { tea_id: tea.id, customer_id: customer.id}
+        put api_v1_subscription_path(sub), params: { title: '' }
+
+        expect(response.status).to eq(400)
+      end
+    end
   end
 end
