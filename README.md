@@ -46,7 +46,7 @@ On your local system, open a terminal session to run the following commands:
 
 ## Project Description
 
-This is a back-end project designed to mimic a take home project. The project is a tea service a customer can subscribe to. 
+This is a back-end project designed to mimic a take home project. The project is a tea service that allows customers to subscribe to specific seas they would like to recieve. The project is focused around creating a new subscription and well as being able to cancel the subscription. 
 
 ## Learning Goals for Project:
 
