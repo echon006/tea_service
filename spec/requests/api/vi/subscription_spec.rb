@@ -39,4 +39,17 @@ RSpec.describe 'Subscription API' do
       end
     end
   end
+
+  describe 'update: patch /subscription' do
+    describe 'happy path' do
+      it 'can update a subscription' do
+        customer = create(:customer)
+        tea = create(:tea)
+        sub = create :subscription, { tea_id: tea.id, customer_id: customer.id}
+        put api_v1_subscription_path(sub), params: { status: false }
+        expect(response).to be_successful
+        expect(Subscription.last.status).to eq(false)
+      end
+    end
+  end
 end
