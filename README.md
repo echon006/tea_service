@@ -73,27 +73,12 @@ Available endpoints
 | PUT | /subscriptions/:id | subscription  | Updates an existing subscrition. | 
 
 <details>
-    <summary> JSON response examples </summary>
+    <summary> POSTMAN examples </summary>
 
-Subscription:
-```
- customer = create(:customer)
- tea = create(:tea)
-  
-  subscription_params = ({
-            title: 'Title 1 for sub 1',
-            price: '4.99',
-            frequency: 4,
-            tea_id: tea.id,
-            customer_id: customer.id
-            })
-headers = {"CONTENT_TYPE" => "application/json"} 
-post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: subscription_params)
-  
-response.body = 
-{\"data\":{\"id\":\"134\",\"type\":\"subscription\",\"attributes\":{\"title\":\"Title 1 for sub 1\",\"price\":\"4.99\",\"frequency\":4,\"status\":true,\"tea_id\":158,\"customer_id\":149}}}
+![Screen Shot 2022-04-14 at 11 50 52 AM](https://user-images.githubusercontent.com/89038271/163448824-836cd7f1-dfa3-4987-bca1-a4598741a536.png)
+ 
+![Screen Shot 2022-04-14 at 11 53 33 AM](https://user-images.githubusercontent.com/89038271/163448967-14b5ebf6-16fd-41c4-91f1-a3bd9e03a17e.png)
 
-```
 </details>
 
 ### Customer's subscriptions endpoints
